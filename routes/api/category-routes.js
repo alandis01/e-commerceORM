@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
                 ]
             }]
         });
-        res.json(category)
+        res.status(200).json(category);
     } catch (err) {
         res.status(500).json(err);
     }
