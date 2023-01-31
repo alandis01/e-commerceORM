@@ -47,3 +47,26 @@ router.get('./id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.post('./', (req, res) => {
+
+    Product.create(req.body)
+    .then((product) => {
+        if (req.body.tagIds.length) {
+            const productTagIdArr = req.body.tagIds.map((tag_id) => {
+                return {
+                    product_id: product.id,
+                    tag_id,
+                };
+            });
+            return ProductTag.bulkCreate(productTagIdArr);
+        }
+        res.status(200).json(product);
+    })
+    .then((productTagIds) => res.status(200).json(productTagIds))
+    .catch((err) => {
+        console.log(err);
+        resizeBy.status(400).json(err);
+    })
+});
+
