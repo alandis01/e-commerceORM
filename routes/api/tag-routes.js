@@ -1,7 +1,7 @@
 const router = require('express').router;
 const { Tag, Product, ProductTag } = require('../../models');
 
-router.get('./', async (req, res) => {
+router.get('/', async (req, res) => {
     try {
         const tag = await Tag.findAll({
             order: ['id'],
