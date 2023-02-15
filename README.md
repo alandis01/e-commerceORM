@@ -17,8 +17,8 @@
 I have created a backend e-commerce ORM application demonstrating MySQL and express js. Install the required packages and run the correct codes to use this application. See Installtion for instructions. 
 
 ## Installation
-npm init -y - run to install package.json
-npm i - install necessary dependencies 
+npm init -y run to install package.json
+npm i install necessary dependencies 
 npm run env:copy to copy .env file remotely
 npm run db:sync to create the necessary databases
 npm run db:seed to seed the databases 

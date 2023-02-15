@@ -1,4 +1,4 @@
-const router = require('express').router;
+const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
 
 router.get('/', async (req, res) => {
@@ -55,6 +55,6 @@ router.put('/:id', async (req, res) => {
     }
   });
 
-  module.exports=  router; 
+  module.exports = router; 
 
 
