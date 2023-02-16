@@ -25,7 +25,7 @@ npm run db:seed to seed the databases
 npm run watch to open server
 
 ## Visuals
-[Screenshot of Video Walkthrough](./assets/13-e-commerceORM%20Screenshot.png)
+![Screenshot of Video Walkthrough](./assets/13-e-commerceORM%20Screenshot.png)
 
 ## License 
 N/A
