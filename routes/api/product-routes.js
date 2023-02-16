@@ -19,13 +19,13 @@ router.get('/', async (req, res) => {
                 }
             ]
         })
-        res.status(200).json(products);
+        res.status(200).json(product);
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
-router.get('./id', async (req, res) => {
+router.get('/id', async (req, res) => {
     try {
         const product = await Product.findByPk(req.params.id, {
             include: [
@@ -49,7 +49,7 @@ router.get('./id', async (req, res) => {
 });
 
 // create a new product 
-router.post('./', (req, res) => {
+router.post('/', (req, res) => {
     Product.create(req.body)
         .then((product) => {
             if (req.body.tagIds.length) {

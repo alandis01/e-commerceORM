@@ -17,7 +17,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('./:id', async (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         const category = await Category.findByPk(req.params.id, {
             invlude: [{
@@ -60,7 +60,7 @@ router.post('/', async (req, res) => {
         }
     });
 
-    router.delete('./id', async (req, res) => {
+    router.delete('/id', async (req, res) => {
         try {
             const category = await Category.destroy({
                 where: {
